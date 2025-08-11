@@ -1,18 +1,9 @@
 import { colors } from "@/constants/theme";
-import { useRouter } from "expo-router";
-import React, { useEffect } from "react";
+import React from "react";
 import { StyleSheet, View } from "react-native";
 import Animated, { FadeInUp } from "react-native-reanimated";
 
 const index = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    setTimeout(() => {
-      router.push("/(auth)/welcome");
-    }, 2500);
-  }, []);
-
   return (
     <View style={styles.container}>
       <Animated.Image
